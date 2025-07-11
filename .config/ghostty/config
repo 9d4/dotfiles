@@ -1,0 +1,23 @@
+font-family = "JetBrainsMono Nerd Font"
+font-size = 11
+font-thicken = true
+font-feature = +calt, +liga, +dlig
+
+background = #191724
+background-opacity = 0.9
+background-blur = true
+
+cursor-style = block
+shell-integration-features = no-cursor
+mouse-hide-while-typing = true
+
+macos-icon = retro
+macos-icon-frame = beige
+
+window-save-state = always
+window-decoration = none
+window-width = 5000
+window-height = 5000
+
+keybind = alt+enter=toggle_fullscreen
+keybind = ctrl+enter=ignore
