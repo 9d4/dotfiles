@@ -14,7 +14,11 @@ sudo pacman -S --noconfirm \
 	neovim \
 	base-devel \
 	xdg-utils \
-	stow
+	stow \
+	grim \
+	wl-clipboard \
+	slurp \
+	jq
 
 echo ">>> Installing AUR helper (yay)..."
 if ! command -v yay &>/dev/null; then
@@ -33,6 +37,7 @@ yay -S --noconfirm \
 	hyprpaper \
 	hyprpolkitagent \
 	hyprpicker \
+	hyprshot \
 	waybar \
 	rofi \
 	cliphist \
@@ -45,6 +50,7 @@ yay -S --noconfirm \
 	ttf-font-awesome \
 	ttf-droid \
 	dunst \
-	nordic-theme
+	nordic-theme \
+	thunar
 
 echo ">>> Done. Now load the config and reboot!" 
