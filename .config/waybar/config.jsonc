@@ -19,8 +19,6 @@
     "memory",
     "network",
     "pulseaudio",
-    "backlight",
-    "keyboard-state",
     "battery",
   ],
   // Modules configuration
