@@ -51,6 +51,7 @@ yay -S --noconfirm \
 	ttf-droid \
 	dunst \
 	nordic-theme \
-	thunar
+	thunar \
+	webcord
 
 echo ">>> Done. Now load the config and reboot!" 

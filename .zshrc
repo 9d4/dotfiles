@@ -106,3 +106,10 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(atuin init zsh)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# bun completions
+[ -s "/home/d/.bun/_bun" ] && source "/home/d/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
