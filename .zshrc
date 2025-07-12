@@ -1,79 +1,14 @@
-export GPG_TTY=$(tty)
-export LD_LIBRARY_PATH="/var/home/linuxbrew/.linuxbrew/lib:$LD_LIBRARY_PATH"
-ulimit -n 10248
-#alias scrcpy="/home/linuxbrew/.linuxbrew/Cellar/scrcpy/2.1.1/bin/scrcpy"
-alias dbo=distrobox
-alias nethogs="sudo /home/linuxbrew/.linuxbrew/sbin/nethogs"
-# alias vim=nvim
-
-## GCC as CC
-# export PATH="$PATH:$(which gcc-14)"
-# CLANG
-export PATH="/home/linuxbrew/.linuxbrew/opt/glibc/bin:$PATH"
-export PATH="/home/linuxbrew/.linuxbrew/opt/glibc/sbin:$PATH"
-export LDFLAGS="-L/home/linuxbrew/.linuxbrew/opt/glibc/lib"
-export CPPFLAGS="-I/home/linuxbrew/.linuxbrew/opt/glibc/include"
-
-# ## volta.sh
-# export VOLTA_HOME="$HOME/.volta"
-# export PATH="$VOLTA_HOME/bin:$PATH"
-
-## WG wireguard
-alias swg="sudo /home/linuxbrew/.linuxbrew/bin/wg"
-
-
-export PATH="$PATH:/home/dma/.local/bin:/home/dma/Android/Sdk/platform-tools/"
-export PATH="$PATH:/home/dma/go/bin"
-export PATH="$PATH:/home/linuxbrew/.linuxbrew/Cellar/openjdk@8/1.8.0-382_1/bin"
-
-## TEMP WINE
-export PATH="$PATH:/var/lib/flatpak/app/com.usebottles.bottles/current/active/files/bin/"
-
-# Distrobox Shortcut
-alias bench9="dbo enter bench9"
-
-# Rust Thing
-source "$HOME/.cargo/env"
-
-# Toolbox
-#alias toolbox="SHELL=/usr/bin/zsh toolbox"
-#alias telo="toolbox enter telo"
-
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
+# Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
+# load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-
-# Get the current hostname
-current_hostname=$(hostname)
-
-if [ "$current_hostname" = "toolbox" ]; then
-    ZSH_THEME="lambda"
-elif [ "$current_hostname" = "dimtaw" ]; then
-    ZSH_THEME="robbyrussell"
-
-    # brew for host
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-else
-    ZSH_THEME="daveverwer"
-fi
-
-# export PATH="/home/linuxbrew/.linuxbrew/opt/node@20/bin:$PATH"
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-# bun completions
-[ -s "/home/dma/.bun/_bun" ] && source "/home/dma/.bun/_bun"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -137,6 +72,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -149,51 +85,20 @@ plugins=(git)
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch $(uname -m)"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# Set personal aliases, overriding those provided by Oh My Zsh libs,
+# plugins, and themes. Aliases can be placed here, though Oh My Zsh
+# users are encouraged to define aliases within a top-level file in
+# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
+# - $ZSH_CUSTOM/aliases.zsh
+# - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-source $ZSH/oh-my-zsh.sh
-#Star Ship
-eval "$(starship init zsh)"
-eval "$(starship completions zsh)"
-
-#Atuin
-eval "$(atuin init zsh)"
-
-# Android SDK
-export ANDROID_HOME=~/Android/Sdk
-export ANDROID_SDK_ROOT=~/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin:~/.local/share/JetBrains/Toolbox/apps/android-studio/jbr/bin
-export JAVA_HOME=~/.local/share/JetBrains/Toolbox/apps/android-studio/jbr
-
-# Shortcuts
-alias todo="$(which todo.sh)"
-
-# IOT Development Binaries
-export PATH="$PATH:/home/dma/development/iot/pyboard/"
-
-# alias esptool="/home/linuxbrew/.linuxbrew/bin/esptool.py"
-# ESPIDF
-alias get_idf='. $HOME/development/iot/esp/esp-idf/export.sh'
-
-# minicom alias use color
-alias minicom='minicom -con'
-
-# Kamal
-alias kamal='/var/home/linuxbrew/.linuxbrew/lib/ruby/gems/3.4.0/gems/kamal-2.5.3/lib/kamal.rb'
