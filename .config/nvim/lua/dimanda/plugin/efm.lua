@@ -61,6 +61,7 @@ return {
 			vue = { prettier },
 			handlebars = { djlintHbs },
 			json = { prettier },
+			jsonc = { prettier },
 			lua = { require("efmls-configs.formatters.stylua") },
 			go = { require("efmls-configs.formatters.gofumpt") },
 			c = { astyle },
