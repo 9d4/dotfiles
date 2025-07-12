@@ -102,3 +102,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+
+echo 'eval "$(atuin init zsh)"' >> ~/.zshrc
+eval "$(atuin init zsh)"
+eval "$(atuin init zsh)"
+eval "$(atuin init zsh)"
+eval "$(atuin init zsh)"
