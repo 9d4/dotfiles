@@ -13,6 +13,8 @@ sudo pacman -S --noconfirm \
 	unzip \
 	neovim \
 	base-devel \
+	xdg-utils \
+	stow
 
 echo ">>> Installing AUR helper (yay)..."
 if ! command -v yay &>/dev/null; then
@@ -41,6 +43,8 @@ yay -S --noconfirm \
 	noto-fonts \
 	noto-fonts-emoji \
 	ttf-font-awesome \
-	ttf-droid
+	ttf-droid \
+	dunst \
+	nordic-theme
 
 echo ">>> Done. Now load the config and reboot!" 
