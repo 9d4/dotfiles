@@ -105,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
 #
 
 eval "$(atuin init zsh)"
+eval "$(starship init zsh)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # bun completions
