@@ -52,6 +52,11 @@ yay -S --noconfirm \
 	dunst \
 	nordic-theme \
 	thunar \
-	webcord
+	webcord \
+	tailscale \
+	trayscale \
+	kdeconnect \
+	syncthing \
+	syncthingtray
 
 echo ">>> Done. Now load the config and reboot!" 
