@@ -57,6 +57,7 @@ yay -S --noconfirm \
 	trayscale \
 	kdeconnect \
 	syncthing \
-	syncthingtray
+	syncthingtray \
+	efm-langserver
 
 echo ">>> Done. Now load the config and reboot!" 
