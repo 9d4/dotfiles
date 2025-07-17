@@ -38,7 +38,7 @@ return {
 			view = {
 				width = 30,
 				side = "left",
-				signcolumn = "yes",
+				-- signcolumn = "yes",
 				float = {
 					enable = true,
 					open_win_config = {
