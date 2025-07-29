@@ -95,12 +95,18 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
-#mpd {
+#mpd,
+#custom-prayer-time {
 	margin: 2px;
 	padding-left: 4px;
 	padding-right: 4px;
 	/* background-color: rgba(0, 0, 0, 0.3); */
 	color: #ffffff;
+}
+
+#custom-prayer-time.alert {
+	color: #ea9a97;
+	font-weight: bold;
 }
 
 .modules-left {

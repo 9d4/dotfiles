@@ -10,7 +10,7 @@
     "hyprland/scratchpad",
     "custom/media",
   ],
-  "modules-center": ["clock"],
+  "modules-center": ["clock", "custom/prayer-time"],
   //"modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "battery", "battery#bat2", "clock", "tray"],
   "modules-right": [
     "tray",
@@ -175,5 +175,14 @@
     },
     "on-click": "pavucontrol",
     "on-click-right": "foot -a pw-top pw-top",
+  },
+  "custom/prayer-time": {
+    "exec": "$HOME/dotfiles/.config/waybar/prayer-time.sh",
+    "return-type": "json",
+    "format": "{icon} {text}",
+    "interval": 500,
+    "format-icons": {
+      "default": " ",
+    },
   },
 }
