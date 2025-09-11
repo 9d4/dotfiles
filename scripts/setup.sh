@@ -40,6 +40,7 @@ yay -S --noconfirm \
 	hyprshot \
 	waybar \
 	rofi \
+	rofimoji \
 	cliphist \
 	brightnessctl \
 	playerctl \
