@@ -1,6 +1,7 @@
 return {
 	"pmizio/typescript-tools.nvim",
 	dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+	enabled = false,
 	config = function()
 		local lspconfig_util = require("lspconfig.util")
 		local cwd = vim.loop.cwd()

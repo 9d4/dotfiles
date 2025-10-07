@@ -123,3 +123,10 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+eval "$(/home/dma/.local/bin/mise activate zsh)"
+
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /home/linuxbrew/.linuxbrew/Cellar/mc/RELEASE.2025-07-21T05-28-08Z_1/bin/mc mc
+

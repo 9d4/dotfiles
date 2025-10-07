@@ -25,6 +25,11 @@ local function usePrettier(fs, executable)
 	}
 end
 
+local rubocopFormatter = {
+	formatCommand = string.format('rubocop -x --format simple --stdin "${INPUT}"'),
+	formatStdin = true,
+}
+
 return {
 	"creativenull/efmls-configs-nvim",
 	version = "v1.7.0",
@@ -64,8 +69,13 @@ return {
 			jsonc = { prettier },
 			lua = { require("efmls-configs.formatters.stylua") },
 			go = { require("efmls-configs.formatters.gofumpt") },
+			rust = { require("efmls-configs.formatters.rustfmt") },
 			c = { astyle },
 			cpp = { astyle },
+			ruby = {
+				require("efmls-configs.linters.rubocop"),
+				rubocopFormatter,
+			},
 		})
 		local efmls_config = {
 			filetypes = vim.tbl_keys(languages),
