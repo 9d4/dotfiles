@@ -67,6 +67,7 @@ return {
 			handlebars = { djlintHbs },
 			json = { prettier },
 			jsonc = { prettier },
+			svelte = { prettier },
 			lua = { require("efmls-configs.formatters.stylua") },
 			go = { require("efmls-configs.formatters.gofumpt") },
 			rust = { require("efmls-configs.formatters.rustfmt") },
