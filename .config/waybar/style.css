@@ -192,8 +192,16 @@ label:focus {
 	background-color: #f53c3c;
 }
 
-#temperature.critical {
+#temperature.critical,
+#memory.critical,
+#cpu.critical {
 	background-color: #eb4d4b;
+}
+
+#temperature.warning,
+#memory.warning,
+#cpu.warning {
+	background-color: #f39c12;
 }
 
 #idle_inhibitor.activated {
