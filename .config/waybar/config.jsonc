@@ -146,7 +146,7 @@
       "critical": 15,
     },
     "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
+    "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{icon} {time}",
     // "format-good": "", // An empty format will hide the module
@@ -168,11 +168,11 @@
   "pulseaudio": {
     "scroll-step": 5, // %, can be a float
     "format": "{icon} {volume}% {format_source}",
-    "format-bluetooth": " {icon} {volume}% {format_source}",
-    "format-bluetooth-muted": "  {icon} {format_source}",
-    "format-muted": "  {format_source}",
+    "format-bluetooth": "󰂯 {icon} {volume}% {format_source}",
+    "format-bluetooth-muted": "󰝟 {icon} {format_source}",
+    "format-muted": "󰝟 {format_source}",
     "format-source": " {volume}%",
-    "format-source-muted": "",
+    "format-source-muted": "󰍭",
     "format-icons": {
       // "headphone": "",
       // "hands-free": "",
@@ -180,7 +180,7 @@
       // "phone": "",
       // "portable": "",
       // "car": "",
-      "default": ["", "", ""],
+      "default": ["", "󰖀", ""],
     },
     "on-click": "pavucontrol",
     "on-click-right": "foot -a pw-top pw-top",
