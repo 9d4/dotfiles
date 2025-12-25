@@ -62,10 +62,10 @@ done
 if [[ -z "$result" ]]; then
   if [[ -n "${prayers[Fajr]}" ]]; then
     # Fajr time exists → show tomorrow's time
-    result=$(output_json "Next: Fajr at ${prayers[Fajr]} (tomorrow)")
+    result=$(output_json "Fajr: ${prayers[Fajr]}")
   else
     # Fajr time is missing → fallback
-    result=$(output_json "Unknown" "alert")
+    result=$(output_json "???" "alert")
   fi
 fi
 echo "$result"
