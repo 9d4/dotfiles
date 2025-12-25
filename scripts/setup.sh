@@ -53,12 +53,9 @@ yay -S --noconfirm \
 	dunst \
 	nordic-theme \
 	thunar \
-	webcord \
 	tailscale \
-	trayscale \
 	kdeconnect \
 	syncthing \
-	syncthingtray \
 	efm-langserver
 
 echo ">>> Done. Now load the config and reboot!" 
