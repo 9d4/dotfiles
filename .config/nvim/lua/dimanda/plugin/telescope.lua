@@ -1,11 +1,14 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	tag = "0.1.6",
+	branch = "master",
 	dependencies = {
 		{ "nvim-lua/plenary.nvim" },
 		{ "smartpde/telescope-recent-files" },
+
+		require("dimanda.plugin.treesitter"),
 	},
 	enabled = not vim.g.vscode, -- Disable Telescope when running in VSCode
+
 	config = function()
 		require("telescope").load_extension("recent_files")
 		require("telescope").setup({

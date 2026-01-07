@@ -3,7 +3,6 @@ local function usePrettier(fs, executable)
 		formatCanRange = true,
 		formatCommand = string.format(
 			"%s '${INPUT}' ${--range-start=charStart} ${--range-end=charEnd} ",
-			-- .. "${--tab-width=tabWidth} ${--use-tabs=!insertSpaces}",
 			fs.executable(executable, fs.Scope.NODE)
 		),
 		formatStdin = true,
@@ -32,16 +31,14 @@ local rubocopFormatter = {
 
 return {
 	"creativenull/efmls-configs-nvim",
-	version = "v1.7.0",
+	version = "v1.*",
 	dependencies = {
 		require("dimanda.plugin.lsp"),
-		"neovim/nvim-lspconfig",
+		"lukas-reineke/lsp-format.nvim",
 	},
 
 	config = function()
-		-- Formatters
 		local fs = require("efmls-configs.fs")
-		local lsp_format = require("lsp-format")
 
 		local prettier = usePrettier(fs, "prettier") -- or prettierd
 		local djlintHbs = {
@@ -51,7 +48,6 @@ return {
 			),
 			formatStdin = true,
 		}
-		local eslint_d = require("efmls-configs.linters.eslint_d")
 		local astyle = require("efmls-configs.formatters.astyle")
 
 		local languages = require("efmls-configs.defaults").languages()
@@ -78,6 +74,7 @@ return {
 				rubocopFormatter,
 			},
 		})
+
 		local efmls_config = {
 			filetypes = vim.tbl_keys(languages),
 			settings = {
@@ -90,8 +87,18 @@ return {
 			},
 		}
 
-		require("lspconfig").efm.setup(vim.tbl_extend("force", efmls_config, {
-			on_attach = lsp_format.on_attach,
-		}))
+		vim.api.nvim_create_autocmd("LspAttach", {
+			callback = function(args)
+				local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
+				require("lsp-format").on_attach(client, args.buf)
+			end,
+		})
+
+		vim.lsp.config(
+			"efm",
+			vim.tbl_extend("force", efmls_config, {
+				cmd = { "efm-langserver" },
+			})
+		)
 	end,
 }
