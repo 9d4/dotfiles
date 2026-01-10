@@ -1,7 +1,7 @@
 vim.opt.guicursor = ""
 
--- vim.opt.number = true
--- vim.opt.relativenumber = true
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 vim.opt.tabstop = 8
 vim.opt.softtabstop = 4
@@ -36,3 +36,5 @@ vim.opt.colorcolumn = "80"
 
 vim.opt.wrap = false
 vim.cmd.set("ignorecase smartcase")
+
+vim.o.winborder = "rounded"

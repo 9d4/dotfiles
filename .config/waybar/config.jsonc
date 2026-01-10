@@ -1,6 +1,6 @@
 {
   // "layer": "top", // Waybar at top layer
-  // "position": "bottom", // Waybar position (top|bottom|left|right)
+  "position": "bottom", // Waybar position (top|bottom|left|right)
   "height": 24, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
   //"spacing": 4, // Gaps between modules (4px)
@@ -127,12 +127,12 @@
   },
   "temperature": {
     "thermal-zone": 2,
-    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+    "hwmon-path": "/sys/class/hwmon/hwmon7/temp1_input",
     "critical-threshold": 70,
     "warning-threshold": 65,
     "format-critical": "{icon} {temperatureC}°C",
     "format": "{icon} {temperatureC}°C",
-    "format-icons": ["", "", ""],
+    "format-icons": ["", "", ""],
   },
   "backlight": {
     // "device": "acpi_video1",

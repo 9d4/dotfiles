@@ -106,7 +106,7 @@ source $ZSH/oh-my-zsh.sh
 #
 
 eval "$(atuin init zsh)"
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # bun completions
@@ -123,7 +123,9 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+#
 eval "$($HOME/.local/bin/mise activate zsh)"
+eval "$($HOME/.local/bin/mise completion zsh)"
 
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
 
