@@ -25,6 +25,12 @@ return {
 		vim.keymap.set("n", "<leader>ps", function()
 			builtin.grep_string({ search = vim.fn.input("Grep > ") })
 		end)
+		vim.keymap.set("n", "<leader>pS", function()
+			builtin.grep_string({
+				search = vim.fn.input("Regex > "),
+				use_regex = true,
+			})
+		end)
 		vim.keymap.set("n", "<leader>pp", builtin.buffers, { desc = "Telescope buffers" })
 
 		vim.api.nvim_set_keymap(
