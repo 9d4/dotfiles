@@ -37,4 +37,4 @@ vim.opt.colorcolumn = "80"
 vim.opt.wrap = false
 vim.cmd.set("ignorecase smartcase")
 
-vim.o.winborder = "rounded"
+vim.o.winborder = "none"

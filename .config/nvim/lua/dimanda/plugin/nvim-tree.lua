@@ -43,7 +43,7 @@ return {
 					enable = true,
 					open_win_config = {
 						relative = "editor",
-						border = "rounded", -- Or any other border style
+						border = "none", -- Or any other border style
 						width = 44, -- Adjust as needed
 						height = 50, -- Adjust as needed
 						row = 8, -- Adjust vertical position

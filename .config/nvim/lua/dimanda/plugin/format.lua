@@ -23,7 +23,9 @@ return {
 			python = { "isort", "black" },
 			javascript = { "prettierd", "prettier", stop_after_first = true },
 			typescript = { "prettierd", "prettier", stop_after_first = true },
-			json = { "prettierd", "prettier", stop_after_first = true },
+			typescriptreact = { "prettierd", "prettier", stop_after_first = true },
+			javascriptreact = { "prettierd", "prettier", stop_after_first = true },
+			json = { "prettier", stop_after_first = true },
 			go = { "gofumpt" },
 		},
 		-- Set default options
@@ -31,7 +33,7 @@ return {
 			lsp_format = "fallback",
 		},
 		-- Set up format-on-save
-		format_on_save = { timeout_ms = 500 },
+		format_on_save = { timeout_ms = 1000 },
 		-- Customize formatters
 		formatters = {
 			shfmt = {
