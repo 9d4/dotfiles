@@ -18,7 +18,8 @@ sudo pacman -S --noconfirm \
 	grim \
 	wl-clipboard \
 	slurp \
-	jq
+	jq \
+	mplayer mpv
 
 echo ">>> Installing AUR helper (yay)..."
 if ! command -v yay &>/dev/null; then
@@ -55,7 +56,6 @@ yay -S --noconfirm \
 	thunar \
 	tailscale \
 	kdeconnect \
-	syncthing \
-	efm-langserver
+	syncthing
 
 echo ">>> Done. Now load the config and reboot!" 
