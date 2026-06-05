@@ -26,3 +26,7 @@ vim.keymap.set("n", "<leader>pb", ":bprev<CR>")
 -- lsp
 vim.keymap.set("n", "gd", "<C-]>")
 vim.keymap.set("n", "gl", vim.diagnostic.open_float)
+
+-- window zoom/restore mappings
+vim.keymap.set("n", "Zz", "<c-w>_<c-w>|", { noremap = true, silent = true })
+vim.keymap.set("n", "Zo", "<c-w>=", { noremap = true, silent = true })

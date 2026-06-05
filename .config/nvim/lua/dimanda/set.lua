@@ -10,6 +10,16 @@ vim.cmd.expandtab = true
 -- vim.cmd.set("noexpandtab")
 vim.opt.smartindent = true
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "pug",
+	callback = function(args)
+		vim.bo[args.buf].expandtab = true
+		vim.bo[args.buf].tabstop = 2
+		vim.bo[args.buf].softtabstop = 2
+		vim.bo[args.buf].shiftwidth = 2
+	end,
+})
+
 vim.cmd("syntax match Tab /\t/")
 vim.cmd("hi Tab gui=underline guifg=blue ctermbg=blue")
 

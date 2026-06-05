@@ -14,6 +14,12 @@ return {
 			"query",
 			"zig",
 			"rust",
+			"markdown",
+			"markdown_inline",
+			"html",
+			"latex",
+			"typst",
+			"yaml",
 		}
 
 		require("nvim-treesitter").install(parsers)
@@ -32,6 +38,5 @@ return {
 			end,
 			once = true,
 		})
-
 	end,
 }
