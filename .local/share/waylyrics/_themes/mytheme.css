@@ -1,0 +1,21 @@
+window#main-window {
+  background-color: hsla(0, 0%, 0%, 0);
+  box-shadow: 0 0 1px 0;
+}
+
+label#above,
+label#below {
+  padding: 3px 6px;
+  color: black;
+  background: hsl(55, 100%, 50%, 0.5);
+  border-radius: 0px;
+}
+
+label#above {
+  font-size: 28px;
+}
+
+label#below {
+  margin: 4px 0;
+  font-size: 24px;
+}
