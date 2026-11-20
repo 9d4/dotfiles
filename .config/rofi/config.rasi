@@ -318,4 +318,10 @@ textbox-prompt-colon {
     text-color: @normal-foreground;
 }
 
-@theme "/usr/share/rofi/themes/lb.rasi"
+//@theme "/usr/share/rofi/themes/lb.rasi"
+
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+
+//@theme "/usr/share/rofi/themes/Arc.rasi"
+
+@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
